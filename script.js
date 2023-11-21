@@ -28,18 +28,15 @@ function withdraw_btn(){
     document.getElementById("current_withdraw").innerText = total_withdraw;
     let total_balance = document.getElementById("total_balance").innerText;
     let total_balance_int = parseInt(total_balance);
+    if(withdraw_amount_int>total_balance_int){
+        alert("you have insufficient balance");
+        return false;
+    }
     let new_total_balance = total_balance_int - withdraw_amount_int;
     document.getElementById("total_balance").innerText = new_total_balance;
     document.getElementById("withdraw_amount").value = " ";
     document.getElementById("current_withdraw").innerText = total_withdraw;
     document.getElementById("total_balance").innerText = new_total_balance;
-    if(new_total_balance < 0){
-        alert("you have insufficient balance");
-        document.getElementById("withdraw_amount").value = " ";
-        document.getElementById("current_withdraw").innerText = total_withdraw;
-        document.getElementById("total_balance").innerText = new_total_balance;
-        return false;
-
-    }
+    
 
 }
