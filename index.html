@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bank</title>
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    
+
+
+    <h1 class="text-center m-5 text-primary">fokira bank</h1>
+    <section class="container row m-5">
+        <div class="card col-lg-4 col-sm-12 m-2 bg-warning shadow-lg" style="width: 18rem;">
+            <div class="card-body">
+              <h5 id="current_deposit" class="card-title">00</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Deposit</h6>
+            </div>
+          </div>
+        <div class="card col-lg-4 col-sm-12 m-2 bg-primary shadow-lg" style="width: 18rem;">
+            <div class="card-body">
+              <h5 id="current_withdraw" class="card-title">00</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Withdraw</h6>
+            </div>
+          </div>
+        <div class="card col-lg-4 col-sm-12 m-2 bg-danger shadow-lg" style="width: 18rem;">
+            <div class="card-body">
+              <h5 id="total_balance" class="card-title">00</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Balance</h6>
+            </div>
+          </div>
+    </section>
+    <section class="container row m-5">
+        <div class="col-lg-6 col-sm-12 m-3">
+            <div  class="input-group input-group-lg ">
+                <input id="deposit_amount" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+              </div>
+              <button onclick="deposit_btn()" type="button" class="btn btn-primary mt-3">Deposit</button>
+        </div>
+        <div class="col-lg-6 col-sm-12 m-3">
+            <div class="input-group input-group-lg">
+                <input id="withdraw_amount" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+              </div>
+              <button onclick="withdraw_btn()" type="button" class="btn btn-primary mt-3">Withdraw</button>
+        </div>
+    </section>
+    <!-- bootstrap js -->
+    <!-- javascript file -->
+    <script src="./script.js"></script>
+</body>
+</html>
